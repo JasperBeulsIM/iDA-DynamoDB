@@ -6,8 +6,14 @@ const morgan = require("morgan");
 
 // DynamoDB
 const AWS = require("aws-sdk");
-AWS.config.update({region: "eu-west-1"});
+AWS.config.update({endpoint: "https://dynamodb.eu-west-1.amazonaws.com"});
 const dynamodb = new AWS.DynamoDB();
+
+
+
+
+const table = "Personen";
+
 
 const app = express();
 
